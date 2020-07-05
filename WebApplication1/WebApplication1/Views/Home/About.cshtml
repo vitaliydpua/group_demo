@@ -1,4 +1,7 @@
-﻿@{
+﻿@model List<string>
+
+
+@{
     ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
@@ -6,3 +9,10 @@
 
 <p>Use this area to provide additional information.</p>
 <h3>How are you?</h3>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+</ul>
+<h1>HI!</h1>
