@@ -8,6 +8,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        static List<string> items = new List<string>();
         public ActionResult Index()
         {
             return View("Hello world");
@@ -17,7 +18,7 @@ namespace WebApplication1.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            return View(items);
         }
 
         public ActionResult Contact()
